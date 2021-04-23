@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:creator" content="@_gonnoc" />
+    <meta name="twitter:title" content="ECSKB Configuratur" />
+    <meta
+      name="twitter:description"
+      content="静電容量式自作キーボードの動作点を調整します"
+    />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ECSKB Configurator</title>
+  </head>
+  <body>
+    <main>
+      <h1>ECSKB Configurator</h1>
+      <div>
+        Low threshold
+        <input type="number" min="200" value="300" step="10" id="low" />
+      </div>
+      <div>
+        High threshold
+        <input type="number" max="1000" value="500" step="10" id="high" />
+      </div>
+      <input type="button" id="read" value="read" />
+      <input type="button" id="write" value="write" />
+      <input type="button" id="reset" value="reset" />
+      <div>
+        <a
+          id="revision"
+          href="https://github.com/sekigon-gonnoc/ecs-configurator"
+        ></a>
+      </div>
+      <div>
+        Copyright (c) 2021 <a href="https://nogikes.booth.pm/">のぎけす屋</a>
+      </div>
+      <script src="./src/index.ts"></script>
+    </main>
+  </body>
+</html>
