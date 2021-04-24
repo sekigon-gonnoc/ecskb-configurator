@@ -49,11 +49,15 @@ document.getElementById("write").addEventListener(
   async () => {
     if (hid.connected == false) {
       await hidOpen();
-      return;
     }
 
     const low = lowText.valueAsNumber;
     const high = highText.valueAsNumber;
+
+    if (low >= high) {
+      alert("High threshold should be larger than low");
+      return;
+    }
 
     hid.write(
       Uint8Array.from([
