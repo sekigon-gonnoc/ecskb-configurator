@@ -24,9 +24,7 @@ const highText = document.getElementById("high") as HTMLInputElement;
 
 const hidOpen = async () => {
   await hid.open(() => {}, {
-    filter: [
-      { vendorId: 0xfeed, productId: 0xec20, usagePage: 0xff60, usage: 0x61 },
-    ],
+    filter: [{ usagePage: 0xff60, usage: 0x61 }],
   });
 
   hid.setReceiveCallback(recvHandler);
